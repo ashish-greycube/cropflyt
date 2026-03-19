@@ -1,7 +1,7 @@
 {
  "app": "cropflyt",
  "charts": [],
- "content": "[{\"id\":\"SArZAfisGx\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CropFlyt Workspace</b></span>\",\"col\":12}},{\"id\":\"12QMORSNaY\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"I2kx89SkA9\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Doctypes</b>\",\"col\":12}},{\"id\":\"D-2LF1DSfp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Farmer\",\"col\":4}},{\"id\":\"1OSZgc8pl6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Spray Job Card\",\"col\":4}},{\"id\":\"RbRbUeAIPv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CropFlyt Settings\",\"col\":4}},{\"id\":\"36Tm7M8dEw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Field CF\",\"col\":4}},{\"id\":\"eZH0zF-bdZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"T6PXmGzRcQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Master Doctypes</b>\",\"col\":12}},{\"id\":\"BX61BT-DMc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Village CF\",\"col\":4}},{\"id\":\"FW-XjO6vDX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District CF\",\"col\":4}},{\"id\":\"q1CW5GBmax\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Drone CF\",\"col\":4}},{\"id\":\"yJeywzFojG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Crop Type CF\",\"col\":4}},{\"id\":\"kfdNpSTnw4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot CF\",\"col\":4}},{\"id\":\"Ndd3rfpkmg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Chemical CF\",\"col\":4}}]",
+ "content": "[{\"id\":\"SArZAfisGx\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CropFlyt Workspace</b></span>\",\"col\":12}},{\"id\":\"12QMORSNaY\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"I2kx89SkA9\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Company Master</b>\",\"col\":12}},{\"id\":\"D-2LF1DSfp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Farmer\",\"col\":6}},{\"id\":\"36Tm7M8dEw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Field \",\"col\":6}},{\"id\":\"1OSZgc8pl6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Drone\",\"col\":6}},{\"id\":\"RbRbUeAIPv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot\",\"col\":6}},{\"id\":\"8OGhOx8Ytp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":6}},{\"id\":\"eZH0zF-bdZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"T6PXmGzRcQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Setup Master</b>\",\"col\":12}},{\"id\":\"BX61BT-DMc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Village \",\"col\":6}},{\"id\":\"FW-XjO6vDX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District \",\"col\":6}},{\"id\":\"yJeywzFojG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Crop Type \",\"col\":6}},{\"id\":\"Ndd3rfpkmg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Chemical \",\"col\":6}},{\"id\":\"UHc6gUM80X\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oRYDpfy7F5\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Settings</b>\",\"col\":12}},{\"id\":\"efNMYQ262a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CropFlyt Settings\",\"col\":6}},{\"id\":\"cU9OouwFk5\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"-Dj4ZfwQOq\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Transaction</b>\",\"col\":12}},{\"id\":\"grnA0NGTs7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Spray Job Card\",\"col\":6}},{\"id\":\"yarPrF_GrA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bill Of Supply\",\"col\":6}}]",
  "creation": "2026-03-18 16:31:12.845099",
  "custom_blocks": [],
  "docstatus": 0,
@@ -14,7 +14,7 @@
  "label": "CropFlyt",
  "link_type": "DocType",
  "links": [],
- "modified": "2026-03-19 11:20:28.258117",
+ "modified": "2026-03-19 17:17:04.955290",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "CropFlyt",
@@ -28,8 +28,16 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Crop Type CF",
-   "link_to": "Crop Type CF",
+   "label": "Drone",
+   "link_to": "Drone CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Field ",
+   "link_to": "Field CF",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -44,8 +52,48 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Spray Job Card",
-   "link_to": "Spray Job Card CF",
+   "label": "Pilot",
+   "link_to": "Pilot CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Item",
+   "link_to": "Item",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Village ",
+   "link_to": "Village CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "District ",
+   "link_to": "District CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Crop Type ",
+   "link_to": "Crop Type CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Chemical ",
+   "link_to": "Chemical CF",
    "stats_filter": "[]",
    "type": "DocType"
   },
@@ -59,48 +107,16 @@
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Field CF",
-   "link_to": "Field CF",
+   "label": "Spray Job Card",
+   "link_to": "Spray Job Card CF",
    "stats_filter": "[]",
    "type": "DocType"
   },
   {
    "color": "Grey",
    "doc_view": "List",
-   "label": "Village CF",
-   "link_to": "Village CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "District CF",
-   "link_to": "District CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Drone CF",
-   "link_to": "Drone CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Pilot CF",
-   "link_to": "Pilot CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Chemical CF",
-   "link_to": "Chemical CF",
+   "label": "Bill Of Supply",
+   "link_to": "Sales Invoice",
    "stats_filter": "[]",
    "type": "DocType"
   }
