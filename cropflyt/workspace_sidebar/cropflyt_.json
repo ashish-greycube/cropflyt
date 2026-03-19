@@ -1,0 +1,28 @@
+{
+ "app": "cropflyt",
+ "creation": "2026-03-12 14:22:18.383883",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "header_icon": "alarm-smoke",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "album",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "CropFlyt Workspace",
+   "link_to": "CropFlyt Workspace",
+   "link_type": "Workspace",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-03-12 14:22:18.383883",
+ "modified_by": "Administrator",
+ "name": "CropFlyt",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "CropFlyt "
+}

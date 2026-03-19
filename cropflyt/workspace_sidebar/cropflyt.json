@@ -1,0 +1,65 @@
+{
+ "app": "cropflyt",
+ "creation": "2026-03-18 16:31:12.896526",
+ "docstatus": 0,
+ "doctype": "Workspace Sidebar",
+ "header_icon": "aperture",
+ "idx": 0,
+ "items": [
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "home",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "CropFlyt",
+   "link_to": "CropFlyt",
+   "link_type": "Workspace",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "customer",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Farmer ",
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "layout-list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Field",
+   "link_to": "Field CF",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "layout-list",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Spray Job Card",
+   "link_to": "Spray Job Card CF",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-03-18 17:16:02.304034",
+ "modified_by": "Administrator",
+ "module": "Cropflyt",
+ "name": "CropFlyt",
+ "owner": "Administrator",
+ "standard": 1,
+ "title": "CropFlyt"
+}

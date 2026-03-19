@@ -1,0 +1,110 @@
+{
+ "app": "cropflyt",
+ "charts": [],
+ "content": "[{\"id\":\"SArZAfisGx\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CropFlyt Workspace</b></span>\",\"col\":12}},{\"id\":\"12QMORSNaY\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"I2kx89SkA9\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Doctypes</b>\",\"col\":12}},{\"id\":\"D-2LF1DSfp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Farmer\",\"col\":4}},{\"id\":\"1OSZgc8pl6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Spray Job Card\",\"col\":4}},{\"id\":\"RbRbUeAIPv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CropFlyt Settings\",\"col\":4}},{\"id\":\"36Tm7M8dEw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Field CF\",\"col\":4}},{\"id\":\"eZH0zF-bdZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"T6PXmGzRcQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Master Doctypes</b>\",\"col\":12}},{\"id\":\"BX61BT-DMc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Village CF\",\"col\":4}},{\"id\":\"FW-XjO6vDX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District CF\",\"col\":4}},{\"id\":\"q1CW5GBmax\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Drone CF\",\"col\":4}},{\"id\":\"yJeywzFojG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Crop Type CF\",\"col\":4}},{\"id\":\"kfdNpSTnw4\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot CF\",\"col\":4}},{\"id\":\"Ndd3rfpkmg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Chemical CF\",\"col\":4}}]",
+ "creation": "2026-03-18 16:31:12.845099",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "hide_custom": 0,
+ "icon": "layout-grid",
+ "idx": 0,
+ "indicator_color": "green",
+ "is_hidden": 0,
+ "label": "CropFlyt",
+ "link_type": "DocType",
+ "links": [],
+ "modified": "2026-03-19 11:20:28.258117",
+ "modified_by": "Administrator",
+ "module": "Cropflyt",
+ "name": "CropFlyt",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 0.0,
+ "shortcuts": [
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Crop Type CF",
+   "link_to": "Crop Type CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Farmer",
+   "link_to": "Customer",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Spray Job Card",
+   "link_to": "Spray Job Card CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "CropFlyt Settings",
+   "link_to": "CropFlyt Settings",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Field CF",
+   "link_to": "Field CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Village CF",
+   "link_to": "Village CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "District CF",
+   "link_to": "District CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Drone CF",
+   "link_to": "Drone CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Pilot CF",
+   "link_to": "Pilot CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "List",
+   "label": "Chemical CF",
+   "link_to": "Chemical CF",
+   "stats_filter": "[]",
+   "type": "DocType"
+  }
+ ],
+ "title": "CropFlyt",
+ "type": "Workspace"
+}

@@ -1,0 +1,305 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SJC-.######",
+ "creation": "2026-03-09 14:55:08.785399",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "farmer_details_section",
+  "farmer_id",
+  "village",
+  "column_break_phmu",
+  "farmer_name",
+  "mobile_number",
+  "field_and_crop_details_section",
+  "field_id",
+  "area_sprayed_bigha",
+  "column_break_rzea",
+  "crop_type",
+  "pilot_and_drone_details_section",
+  "pilot_name",
+  "drone_assigned",
+  "drone_details",
+  "time_and_spray_details_section",
+  "scheduled_date",
+  "work_start_time",
+  "chemical",
+  "status",
+  "pre_spray_photo_reference",
+  "post_spray_photo_reference",
+  "column_break_uutq",
+  "completion_date",
+  "work_end_time",
+  "dose_per_bigha",
+  "remarks",
+  "section_break_yssd",
+  "expense_tracking",
+  "expense_total_amount",
+  "section_break_xbdm",
+  "farmer_signature",
+  "column_break_zvzu",
+  "cropflyt_representative_signature"
+ ],
+ "fields": [
+  {
+   "fieldname": "farmer_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Farmer Id",
+   "options": "Customer",
+   "reqd": 1
+  },
+  {
+   "fieldname": "field_id",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Field Id",
+   "options": "Field CF",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "field_id.crop_type",
+   "fetch_if_empty": 1,
+   "fieldname": "crop_type",
+   "fieldtype": "Link",
+   "label": "Crop Type",
+   "options": "Crop Type CF"
+  },
+  {
+   "fieldname": "scheduled_date",
+   "fieldtype": "Date",
+   "label": "Scheduled Date"
+  },
+  {
+   "fieldname": "pilot_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Pilot Name",
+   "options": "Pilot CF",
+   "reqd": 1
+  },
+  {
+   "fieldname": "drone_assigned",
+   "fieldtype": "Link",
+   "label": "Drone Assigned",
+   "options": "Drone CF",
+   "reqd": 1
+  },
+  {
+   "fieldname": "chemical",
+   "fieldtype": "Link",
+   "label": "Chemical",
+   "options": "Chemical CF"
+  },
+  {
+   "fieldname": "column_break_zvzu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "As Confirmed By Farmer",
+   "fieldname": "dose_per_bigha",
+   "fieldtype": "Float",
+   "label": "Dose Per Bigha",
+   "precision": "2"
+  },
+  {
+   "fetch_from": "field_id.area_bigha",
+   "fetch_if_empty": 1,
+   "fieldname": "area_sprayed_bigha",
+   "fieldtype": "Float",
+   "label": "Area Sprayed Bigha",
+   "precision": "2"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "label": "Status",
+   "options": "\nBooked\nScheduled\nCompleted(Ready For billing)\nBilled\nPaid\nCancelled"
+  },
+  {
+   "fieldname": "completion_date",
+   "fieldtype": "Date",
+   "label": "Completion Date"
+  },
+  {
+   "fieldname": "section_break_yssd",
+   "fieldtype": "Section Break",
+   "label": "Expense Details"
+  },
+  {
+   "fieldname": "expense_tracking",
+   "fieldtype": "Table",
+   "label": "Expense Tracking",
+   "options": "Expense Tracking CF"
+  },
+  {
+   "fieldname": "expense_total_amount",
+   "fieldtype": "Read Only",
+   "label": "Expense Total Amount"
+  },
+  {
+   "fetch_from": "farmer_id.customer_name",
+   "fieldname": "farmer_name",
+   "fieldtype": "Data",
+   "label": "Farmer Name"
+  },
+  {
+   "fetch_from": "farmer_id.custom_village",
+   "fetch_if_empty": 1,
+   "fieldname": "village",
+   "fieldtype": "Link",
+   "label": "Village",
+   "options": "Village CF"
+  },
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile Number"
+  },
+  {
+   "fieldname": "work_start_time",
+   "fieldtype": "Time",
+   "label": "Work Start Time"
+  },
+  {
+   "fieldname": "work_end_time",
+   "fieldtype": "Time",
+   "label": "Work End Time"
+  },
+  {
+   "fieldname": "pre_spray_photo_reference",
+   "fieldtype": "Attach Image",
+   "label": "Pre-Spray Photo Reference"
+  },
+  {
+   "fieldname": "post_spray_photo_reference",
+   "fieldtype": "Attach Image",
+   "label": "Post-Spray Photo Reference "
+  },
+  {
+   "fieldname": "farmer_signature",
+   "fieldtype": "Signature",
+   "label": "Farmer Signature"
+  },
+  {
+   "fieldname": "remarks",
+   "fieldtype": "Small Text",
+   "label": "Remarks"
+  },
+  {
+   "fieldname": "cropflyt_representative_signature",
+   "fieldtype": "Signature",
+   "label": "CROPFLYT representative signature"
+  },
+  {
+   "fieldname": "drone_details",
+   "fieldtype": "Table",
+   "label": "Drone Details",
+   "options": "Drone Flight Detail"
+  },
+  {
+   "fieldname": "farmer_details_section",
+   "fieldtype": "Section Break",
+   "label": "Farmer Details"
+  },
+  {
+   "fieldname": "column_break_phmu",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "field_and_crop_details_section",
+   "fieldtype": "Section Break",
+   "label": "Field And Crop Details"
+  },
+  {
+   "fieldname": "column_break_rzea",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "pilot_and_drone_details_section",
+   "fieldtype": "Section Break",
+   "label": "Pilot And Drone Details"
+  },
+  {
+   "fieldname": "section_break_xbdm",
+   "fieldtype": "Section Break",
+   "label": "Confirmation Section"
+  },
+  {
+   "fieldname": "time_and_spray_details_section",
+   "fieldtype": "Section Break",
+   "label": "Time And Spray Details"
+  },
+  {
+   "fieldname": "column_break_uutq",
+   "fieldtype": "Column Break"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2026-03-19 11:01:39.931448",
+ "modified_by": "Administrator",
+ "module": "Cropflyt",
+ "name": "Spray Job Card CF",
+ "naming_rule": "Expression",
+ "owner": "Administrator@example.com",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "rows_threshold_for_grid_search": 20,
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [
+  {
+   "color": "Light Blue",
+   "title": "Booked"
+  },
+  {
+   "color": "Yellow",
+   "title": "Scheduled"
+  },
+  {
+   "color": "Red",
+   "title": "Cancelled"
+  },
+  {
+   "color": "Purple",
+   "title": "Completed(Ready For billing)"
+  },
+  {
+   "color": "Orange",
+   "title": "Billed"
+  },
+  {
+   "color": "Green",
+   "title": "Paid"
+  }
+ ]
+}

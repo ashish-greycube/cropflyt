@@ -1,0 +1,69 @@
+import frappe
+from frappe.custom.doctype.custom_field.custom_field import create_custom_fields
+from frappe.desk.page.setup_wizard.setup_wizard import make_records
+
+def after_migrate():
+    custom_fields = {
+        "Customer" : [
+            {
+                'fieldname' : 'custom_district',
+                'fieldtype' : 'Link',
+                'label' : 'District',
+                'options' : 'District CF',
+                'insert_after' : 'territory',
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            },
+            {
+                'fieldname' : 'custom_village',
+                'fieldtype' : 'Link',
+                'label' : 'Village',
+                'options' : 'Village CF',
+                'insert_after' : 'custom_district',
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            },
+            {
+                'fieldname' : 'custom_primary_crop',
+                'fieldtype' : 'Link',
+                'label' : 'Primary Crop',
+                'options' : 'Crop CF',
+                'insert_after' : 'gender',
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            },
+            {
+                'fieldname' : 'custom_total_land_bigha',
+                'fieldtype' : 'Float',
+                'label' : 'Total Land Bigha',
+                'insert_after' : 'custom_primary_crop',
+                'precision': 2,
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            },
+            {
+                'fieldname' : 'custom_notes',
+                'fieldtype' : 'Small Text',
+                'label' : 'Notes',
+                'insert_after' : 'custom_village',
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            },
+        ],
+        "Sales Invoice" : [
+            {
+                'fieldname' : 'custom_spray_job_id',
+                'fieldtype' : 'Link',
+                'label' : 'Spray Job Id',
+                'options' : 'Spray Job Card CF',
+                'insert_after' : 'customer',
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            }
+        ]
+    }
+    
+    print("Adding Custom Fields In Customer and Sales Invoice")
+    for dt, fields in custom_fields.items():
+        print("*******\n %s: " % dt, [d.get("fieldname") for d in fields])
+    create_custom_fields(custom_fields)
