@@ -1,20 +1,167 @@
 {
  "app": "cropflyt",
  "charts": [],
- "content": "[{\"id\":\"SArZAfisGx\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\"><b>CropFlyt Workspace</b></span>\",\"col\":12}},{\"id\":\"12QMORSNaY\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"I2kx89SkA9\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Company Master</b>\",\"col\":12}},{\"id\":\"D-2LF1DSfp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Farmer\",\"col\":6}},{\"id\":\"36Tm7M8dEw\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Field \",\"col\":6}},{\"id\":\"1OSZgc8pl6\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Drone\",\"col\":6}},{\"id\":\"RbRbUeAIPv\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Pilot\",\"col\":6}},{\"id\":\"8OGhOx8Ytp\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Item\",\"col\":6}},{\"id\":\"eZH0zF-bdZ\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"T6PXmGzRcQ\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Setup Master</b>\",\"col\":12}},{\"id\":\"BX61BT-DMc\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Village \",\"col\":6}},{\"id\":\"FW-XjO6vDX\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"District \",\"col\":6}},{\"id\":\"yJeywzFojG\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Crop Type \",\"col\":6}},{\"id\":\"Ndd3rfpkmg\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Chemical \",\"col\":6}},{\"id\":\"UHc6gUM80X\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"oRYDpfy7F5\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Settings</b>\",\"col\":12}},{\"id\":\"efNMYQ262a\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"CropFlyt Settings\",\"col\":6}},{\"id\":\"cU9OouwFk5\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"-Dj4ZfwQOq\",\"type\":\"paragraph\",\"data\":{\"text\":\"<b>Transaction</b>\",\"col\":12}},{\"id\":\"grnA0NGTs7\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Spray Job Card\",\"col\":6}},{\"id\":\"yarPrF_GrA\",\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Bill Of Supply\",\"col\":6}}]",
- "creation": "2026-03-18 16:31:12.845099",
+ "content": "[{\"id\":\"bfRyp7nqkT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">CropFlyt workspace</span>\",\"col\":12}},{\"id\":\"4vmxfuaNpB\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"gnO4JRbMN5\",\"type\":\"card\",\"data\":{\"card_name\":\"Company Master\",\"col\":4}},{\"id\":\"In1TSTeI_R\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup Master\",\"col\":4}},{\"id\":\"Mq9-6_zcQF\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"pvAHcuQ0nP\",\"type\":\"card\",\"data\":{\"card_name\":\"Transaction\",\"col\":4}}]",
+ "creation": "2026-03-20 11:42:04.325927",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
  "hide_custom": 0,
- "icon": "layout-grid",
- "idx": 0,
+ "icon": "aperture",
+ "idx": 1,
  "indicator_color": "green",
  "is_hidden": 0,
  "label": "CropFlyt",
  "link_type": "DocType",
- "links": [],
- "modified": "2026-03-19 17:17:04.955290",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Company Master",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Farmer ",
+   "link_count": 0,
+   "link_to": "Customer",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Field",
+   "link_count": 0,
+   "link_to": "Field CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Pilot",
+   "link_count": 0,
+   "link_to": "Pilot CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Drone",
+   "link_count": 0,
+   "link_to": "Drone CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup Master",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Village",
+   "link_count": 0,
+   "link_to": "Village CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "District",
+   "link_count": 0,
+   "link_to": "District CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Crop Type",
+   "link_count": 0,
+   "link_to": "Crop Type CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Chemical",
+   "link_count": 0,
+   "link_to": "Chemical CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Settings",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Cropflyt Settings",
+   "link_count": 0,
+   "link_to": "CropFlyt Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Transaction",
+   "link_count": 2,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Spray Job Card",
+   "link_count": 0,
+   "link_to": "Spray Job Card CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Bill Of Supply",
+   "link_count": 0,
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-03-20 12:07:13.805813",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "CropFlyt",
@@ -24,103 +171,7 @@
  "quick_lists": [],
  "roles": [],
  "sequence_id": 0.0,
- "shortcuts": [
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Drone",
-   "link_to": "Drone CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Field ",
-   "link_to": "Field CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Farmer",
-   "link_to": "Customer",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Pilot",
-   "link_to": "Pilot CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Item",
-   "link_to": "Item",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Village ",
-   "link_to": "Village CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "District ",
-   "link_to": "District CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Crop Type ",
-   "link_to": "Crop Type CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Chemical ",
-   "link_to": "Chemical CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "CropFlyt Settings",
-   "link_to": "CropFlyt Settings",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Spray Job Card",
-   "link_to": "Spray Job Card CF",
-   "stats_filter": "[]",
-   "type": "DocType"
-  },
-  {
-   "color": "Grey",
-   "doc_view": "List",
-   "label": "Bill Of Supply",
-   "link_to": "Sales Invoice",
-   "stats_filter": "[]",
-   "type": "DocType"
-  }
- ],
+ "shortcuts": [],
  "title": "CropFlyt",
  "type": "Workspace"
 }
