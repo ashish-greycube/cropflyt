@@ -10,7 +10,7 @@
   "field_name",
   "village",
   "crop_type",
-  "gps_location",
+  "location",
   "column_break_rfoj",
   "farmer_name",
   "area_bigha",
@@ -46,11 +46,6 @@
    "options": "Crop Type CF"
   },
   {
-   "fieldname": "gps_location",
-   "fieldtype": "Geolocation",
-   "label": "GPS Location"
-  },
-  {
    "fieldname": "column_break_rfoj",
    "fieldtype": "Column Break"
   },
@@ -71,12 +66,17 @@
    "fieldname": "notes",
    "fieldtype": "Small Text",
    "label": "Notes"
+  },
+  {
+   "fieldname": "location",
+   "fieldtype": "Geolocation",
+   "label": "GPS Location"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-18 17:18:40.484208",
+ "modified": "2026-03-20 09:13:33.580667",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Field CF",
