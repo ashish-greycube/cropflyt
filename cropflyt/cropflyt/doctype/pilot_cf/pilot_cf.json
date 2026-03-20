@@ -13,6 +13,7 @@
  ],
  "fields": [
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "incentive_rate_per_bigha",
    "fieldtype": "Float",
    "label": "Incentive Rate Per Bigha"
@@ -22,6 +23,7 @@
    "fieldtype": "Column Break"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "pilot_id",
    "fieldtype": "Link",
    "label": "Pilot Id",
@@ -39,7 +41,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-20 14:14:42.990959",
+ "modified": "2026-03-20 15:46:15.964325",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Pilot CF",
@@ -127,6 +129,7 @@
    "role": "Accounts Manager"
   }
  ],
+ "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",

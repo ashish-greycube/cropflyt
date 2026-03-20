@@ -44,6 +44,7 @@
  ],
  "fields": [
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "farmer_id",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -52,6 +53,7 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "field_id",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -68,11 +70,13 @@
    "options": "Crop Type CF"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "scheduled_date",
    "fieldtype": "Date",
    "label": "Scheduled Date"
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "pilot_name",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -81,6 +85,7 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "drone_assigned",
    "fieldtype": "Link",
    "label": "Drone Assigned",
@@ -88,6 +93,7 @@
    "reqd": 1
   },
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "chemical",
    "fieldtype": "Link",
    "label": "Chemical",
@@ -105,6 +111,7 @@
    "precision": "2"
   },
   {
+   "allow_in_quick_entry": 1,
    "fetch_from": "field_id.area_bigha",
    "fetch_if_empty": 1,
    "fieldname": "area_sprayed_bigha",
@@ -155,6 +162,7 @@
    "options": "Village CF"
   },
   {
+   "allow_in_quick_entry": 1,
    "fetch_if_empty": 1,
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
@@ -253,7 +261,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-20 14:14:01.456235",
+ "modified": "2026-03-20 15:43:54.454853",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",
@@ -341,6 +349,7 @@
    "role": "Accounts Manager"
   }
  ],
+ "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",
