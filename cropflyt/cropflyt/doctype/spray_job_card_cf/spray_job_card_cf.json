@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "SJC-.######",
+ "autoname": "SJCF-.YYYY.-.####",
  "creation": "2026-03-09 14:55:08.785399",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -23,14 +23,12 @@
   "drone_details",
   "time_and_spray_details_section",
   "scheduled_date",
-  "work_start_time",
   "chemical",
   "status",
   "pre_spray_photo_reference",
   "post_spray_photo_reference",
   "column_break_uutq",
   "completion_date",
-  "work_end_time",
   "dose_per_bigha",
   "remarks",
   "section_break_yssd",
@@ -162,16 +160,6 @@
    "label": "Mobile Number"
   },
   {
-   "fieldname": "work_start_time",
-   "fieldtype": "Time",
-   "label": "Work Start Time"
-  },
-  {
-   "fieldname": "work_end_time",
-   "fieldtype": "Time",
-   "label": "Work End Time"
-  },
-  {
    "fieldname": "pre_spray_photo_reference",
    "fieldtype": "Attach Image",
    "label": "Pre-Spray Photo Reference"
@@ -194,7 +182,7 @@
   {
    "fieldname": "cropflyt_representative_signature",
    "fieldtype": "Signature",
-   "label": "CROPFLYT representative signature"
+   "label": "Cropflyt Representative Signature"
   },
   {
    "fieldname": "drone_details",
@@ -254,7 +242,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-21 09:58:07.611843",
+ "modified": "2026-03-24 15:31:41.797145",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",
