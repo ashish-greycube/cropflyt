@@ -46,7 +46,8 @@ def create_invoice(source_name, target_doc=None):
             "doctype": "Sales Invoice",
             "field_map": {
                 "name" : "custom_spray_job_id",
-                "farmer_id": "customer"
+                "farmer_id": "customer",
+                "mobile_number":"custom_farmer_mobile_no"
             }
         }
     }, target_doc, set_missing_values)

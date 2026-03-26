@@ -77,6 +77,14 @@ def after_migrate():
                 'insert_after' : 'customer',
                 'is_custom_field' : 1,
                 'is_system_generated' : 0,
+            },
+            {
+                'fieldname' : 'custom_farmer_mobile_no',
+                'fieldtype' : 'Phone',
+                'label' : 'Farmer Mobile No',
+                'insert_after' : 'custom_spray_job_id',
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
             }
         ]
     }
