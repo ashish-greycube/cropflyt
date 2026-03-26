@@ -232,8 +232,7 @@
   {
    "fieldname": "chemical_details_section",
    "fieldtype": "Section Break",
-   "hide_border": 1,
-   "label": "Chemical Details"
+   "hide_border": 1
   },
   {
    "fieldname": "chemical_applied_details",
@@ -272,7 +271,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-26 14:14:09.966770",
+ "modified": "2026-03-26 14:51:18.240460",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",
