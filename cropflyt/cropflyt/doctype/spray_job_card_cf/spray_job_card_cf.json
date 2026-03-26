@@ -17,23 +17,28 @@
   "area_sprayed_bigha",
   "column_break_rzea",
   "crop_type",
+  "chemical_details_section",
+  "chemical_applied_details",
+  "section_break_ueqq",
+  "phi_communicated",
+  "column_break_blup",
+  "total_chemical_amount",
   "pilot_and_drone_details_section",
   "pilot_name",
   "drone_assigned",
   "drone_details",
   "time_and_spray_details_section",
   "scheduled_date",
-  "chemical",
   "status",
   "pre_spray_photo_reference",
   "post_spray_photo_reference",
   "column_break_uutq",
   "completion_date",
-  "dose_per_bigha",
   "remarks",
   "section_break_yssd",
   "expense_tracking",
   "expense_total_amount",
+  "payment_method",
   "section_break_xbdm",
   "farmer_signature",
   "column_break_zvzu",
@@ -86,21 +91,8 @@
    "reqd": 1
   },
   {
-   "fieldname": "chemical",
-   "fieldtype": "Link",
-   "label": "Chemical",
-   "options": "Chemical CF"
-  },
-  {
    "fieldname": "column_break_zvzu",
    "fieldtype": "Column Break"
-  },
-  {
-   "description": "As Confirmed By Farmer",
-   "fieldname": "dose_per_bigha",
-   "fieldtype": "Float",
-   "label": "Dose Per Bigha",
-   "precision": "2"
   },
   {
    "fetch_from": "field_id.area_bigha",
@@ -236,13 +228,51 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "chemical_details_section",
+   "fieldtype": "Section Break",
+   "hide_border": 1,
+   "label": "Chemical Details"
+  },
+  {
+   "fieldname": "chemical_applied_details",
+   "fieldtype": "Table",
+   "label": "Chemical Applied Details",
+   "options": "Chemical Applied Detail"
+  },
+  {
+   "fieldname": "section_break_ueqq",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "phi_communicated",
+   "fieldtype": "Check",
+   "label": "Is Pre-Harvest Interval Communicated To Farmer (Legal Consent)"
+  },
+  {
+   "description": "Total cost of chemical used",
+   "fieldname": "total_chemical_amount",
+   "fieldtype": "Currency",
+   "label": "Total Chemical Amount"
+  },
+  {
+   "fieldname": "column_break_blup",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "payment_method",
+   "fieldtype": "Select",
+   "label": "Payment Method",
+   "options": "\nCash\nUPI\nBank Transfer"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-24 15:31:41.797145",
+ "modified": "2026-03-26 13:31:53.631587",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",

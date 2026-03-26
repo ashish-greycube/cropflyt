@@ -25,9 +25,20 @@ class SprayJobCardCF(Document):
         if(self.area_sprayed_bigha > area):
             frappe.throw("Area Sprayed Bigha is Greater than The Actual Area of Field.")
             
+        total_chemical_amount = 0
+        
+        for row in self.chemical_applied_details:
+            total_chemical_amount += row.amount 
+        
+        self.total_chemical_amount = total_chemical_amount
+            
     def before_validate(self):
         for row in self.expense_tracking:
             row.amount = (row.quantity or 0) * (row.rate or 0)
+            
+        for row in self.chemical_applied_details:
+            row.total_quantity = self.area_sprayed_bigha * row.dose_per_bigha
+            row.amount = row.total_quantity * row.rate
     
 
 @frappe.whitelist()

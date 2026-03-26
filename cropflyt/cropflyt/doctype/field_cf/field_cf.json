@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": ".farmer_name.-.#####",
+ "autoname": "farmer_name.-.#####",
  "creation": "2026-03-09 14:32:05.067292",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -83,7 +83,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-21 09:35:21.515900",
+ "modified": "2026-03-26 13:27:55.161587",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Field CF",

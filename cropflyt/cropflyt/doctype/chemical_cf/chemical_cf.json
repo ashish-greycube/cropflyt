@@ -6,21 +6,81 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "chemical_name"
+  "chemical_name",
+  "chemical_category",
+  "cost_per_unit",
+  "phi_days",
+  "column_break_rvzx",
+  "active_ingredient",
+  "recommended_dose_per_bigha",
+  "drone_compatible"
  ],
  "fields": [
   {
    "allow_in_quick_entry": 1,
    "fieldname": "chemical_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Chemical Name",
+   "reqd": 1,
    "unique": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "description": "e.g. \"Mancozeb 75% WP\"",
+   "fieldname": "active_ingredient",
+   "fieldtype": "Data",
+   "label": "Active Ingredient"
+  },
+  {
+   "fieldname": "chemical_category",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Chemical Category",
+   "options": "Chemical Category CF",
+   "reqd": 1
+  },
+  {
+   "description": "Standard reference dose",
+   "fieldname": "recommended_dose_per_bigha",
+   "fieldtype": "Float",
+   "label": "Recommended Dose Per Bigha",
+   "precision": "2",
+   "reqd": 1
+  },
+  {
+   "description": "Critical - drives harvest safe date (legal)",
+   "fieldname": "phi_days",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Phi Days",
+   "reqd": 1
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "default": "0",
+   "description": "Can this be used in drone?",
+   "fieldname": "drone_compatible",
+   "fieldtype": "Check",
+   "label": "Drone Compatible"
+  },
+  {
+   "description": "Cost per 1 Ltr",
+   "fieldname": "cost_per_unit",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Cost Per Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_rvzx",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-20 15:55:02.713305",
+ "modified": "2026-03-26 11:30:19.248625",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Chemical CF",

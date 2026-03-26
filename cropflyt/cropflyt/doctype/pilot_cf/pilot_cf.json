@@ -7,16 +7,22 @@
  "engine": "InnoDB",
  "field_order": [
   "pilot_id",
+  "pilot_name",
   "incentive_rate_per_bigha",
   "column_break_zrfp",
-  "pilot_name"
+  "dgca_rpas_license_no",
+  "mobile_number",
+  "license_expiry_date"
  ],
  "fields": [
   {
    "allow_in_quick_entry": 1,
    "fieldname": "incentive_rate_per_bigha",
    "fieldtype": "Float",
-   "label": "Incentive Rate Per Bigha"
+   "in_list_view": 1,
+   "label": "Incentive Rate Per Bigha",
+   "precision": "2",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_zrfp",
@@ -26,8 +32,10 @@
    "allow_in_quick_entry": 1,
    "fieldname": "pilot_id",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Pilot Id",
    "options": "User",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -36,12 +44,32 @@
    "fieldtype": "Data",
    "label": "Pilot Name",
    "unique": 1
+  },
+  {
+   "fieldname": "dgca_rpas_license_no",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Dgca Rpas License No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "mobile_number",
+   "fieldtype": "Phone",
+   "label": "Mobile No",
+   "reqd": 1
+  },
+  {
+   "fieldname": "license_expiry_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "License Expiry Date",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-20 15:46:15.964325",
+ "modified": "2026-03-26 13:52:06.121554",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Pilot CF",
