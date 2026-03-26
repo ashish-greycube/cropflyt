@@ -132,11 +132,9 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-doc_events = {
-	"Customer": {
-		"before_save": "cropflyt.api.validate_customer_number"
-	}
-}
+# doc_events = {
+	
+# }
 
 # Scheduled Tasks
 # ---------------
