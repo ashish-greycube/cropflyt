@@ -62,7 +62,7 @@
    "description": "Can this be used in drone?",
    "fieldname": "drone_compatible",
    "fieldtype": "Check",
-   "label": "Drone Compatible"
+   "label": "Is Drone Compatible?"
   },
   {
    "description": "Cost per 1 Ltr",
@@ -80,7 +80,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-26 11:30:19.248625",
+ "modified": "2026-03-26 14:19:24.599878",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Chemical CF",

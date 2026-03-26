@@ -35,24 +35,28 @@
    "precision": "2"
   },
   {
+   "description": "Area Sprayed Bigha(Parent) x Dose Per Bigha",
    "fieldname": "total_quantity",
    "fieldtype": "Float",
    "in_list_view": 1,
    "label": "Total Quantity",
-   "precision": "2"
+   "precision": "2",
+   "read_only": 1
   },
   {
+   "description": "Total Quantity x Rate",
    "fieldname": "amount",
    "fieldtype": "Currency",
    "in_list_view": 1,
-   "label": "Amount"
+   "label": "Amount",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-03-26 12:13:25.902905",
+ "modified": "2026-03-26 14:23:58.782485",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Chemical Applied Detail",

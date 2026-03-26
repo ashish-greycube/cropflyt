@@ -10,6 +10,7 @@
  ],
  "fields": [
   {
+   "allow_in_quick_entry": 1,
    "fieldname": "category_name",
    "fieldtype": "Data",
    "label": "Category Name",
@@ -19,7 +20,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-26 10:59:25.005976",
+ "modified": "2026-03-26 14:18:01.406799",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Chemical Category CF",
@@ -39,6 +40,7 @@
    "write": 1
   }
  ],
+ "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
  "sort_field": "creation",

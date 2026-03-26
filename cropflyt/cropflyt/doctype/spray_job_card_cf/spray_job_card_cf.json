@@ -249,7 +249,7 @@
    "default": "0",
    "fieldname": "phi_communicated",
    "fieldtype": "Check",
-   "label": "Is Pre-Harvest Interval Communicated To Farmer (Legal Consent)"
+   "label": "Is Pre-Harvest Interval Communicated To Farmer <br> (Legal Consent)"
   },
   {
    "description": "Total cost of chemical used",
@@ -272,7 +272,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-26 13:31:53.631587",
+ "modified": "2026-03-26 14:14:09.966770",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",
@@ -358,6 +358,17 @@
    "read": 1,
    "report": 1,
    "role": "Accounts Manager"
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Pilot",
+   "share": 1,
+   "submit": 1,
+   "write": 1
   }
  ],
  "row_format": "Dynamic",
