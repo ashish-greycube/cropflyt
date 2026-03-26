@@ -135,7 +135,7 @@
    "hidden": 0,
    "is_query_report": 0,
    "label": "Transaction",
-   "link_count": 4,
+   "link_count": 5,
    "link_type": "DocType",
    "onboard": 0,
    "type": "Card Break"
@@ -179,9 +179,19 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lead",
+   "link_count": 0,
+   "link_to": "Lead",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2026-03-21 09:44:21.563383",
+ "modified": "2026-03-26 15:15:40.798935",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "CropFlyt",
