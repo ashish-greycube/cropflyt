@@ -17,55 +17,6 @@
   {
    "hidden": 0,
    "is_query_report": 0,
-   "label": "Setup Master",
-   "link_count": 4,
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Village",
-   "link_count": 0,
-   "link_to": "Village CF",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "District",
-   "link_count": 0,
-   "link_to": "District CF",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Crop Type",
-   "link_count": 0,
-   "link_to": "Crop Type CF",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
-   "label": "Chemical",
-   "link_count": 0,
-   "link_to": "Chemical CF",
-   "link_type": "DocType",
-   "onboard": 0,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "is_query_report": 0,
    "label": "Company Master",
    "link_count": 3,
    "link_type": "DocType",
@@ -189,9 +140,68 @@
    "link_type": "DocType",
    "onboard": 0,
    "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Setup Master",
+   "link_count": 5,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Village",
+   "link_count": 0,
+   "link_to": "Village CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "District",
+   "link_count": 0,
+   "link_to": "District CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Crop Type",
+   "link_count": 0,
+   "link_to": "Crop Type CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Chemical",
+   "link_count": 0,
+   "link_to": "Chemical CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Chemical Category",
+   "link_count": 0,
+   "link_to": "Chemical Category CF",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
   }
  ],
- "modified": "2026-03-26 15:15:40.798935",
+ "modified": "2026-03-30 13:14:26.948041",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "CropFlyt",
