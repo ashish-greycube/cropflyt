@@ -146,7 +146,6 @@
   },
   {
    "fetch_from": "farmer_id.custom_farmer_mobile_no",
-   "fetch_if_empty": 1,
    "fieldname": "mobile_number",
    "fieldtype": "Phone",
    "label": "Mobile Number"
@@ -254,7 +253,8 @@
    "description": "Total cost of chemical used",
    "fieldname": "total_chemical_amount",
    "fieldtype": "Currency",
-   "label": "Total Chemical Amount"
+   "label": "Total Chemical Amount",
+   "read_only": 1
   },
   {
    "fieldname": "column_break_blup",
@@ -271,7 +271,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2026-03-27 11:59:49.663899",
+ "modified": "2026-03-30 11:51:41.434438",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",

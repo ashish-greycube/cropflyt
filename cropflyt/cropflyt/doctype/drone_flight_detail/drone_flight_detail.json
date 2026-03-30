@@ -35,13 +35,15 @@
    "fieldname": "flight_start_time",
    "fieldtype": "Time",
    "in_list_view": 1,
-   "label": "Flight Start Time"
+   "label": "Flight Start Time",
+   "reqd": 1
   },
   {
    "fieldname": "flight_end_time",
    "fieldtype": "Time",
    "in_list_view": 1,
-   "label": "Flight End Time"
+   "label": "Flight End Time",
+   "reqd": 1
   },
   {
    "fieldname": "area_covered_in_bigha",
@@ -62,7 +64,8 @@
   {
    "fieldname": "battery_used__cycle",
    "fieldtype": "Int",
-   "label": "Battery Used / Cycle"
+   "label": "Battery Used / Cycle",
+   "reqd": 1
   },
   {
    "fieldname": "remarks",
@@ -78,7 +81,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2026-03-19 10:20:03.636579",
+ "modified": "2026-03-30 11:52:39.178933",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Drone Flight Detail",
