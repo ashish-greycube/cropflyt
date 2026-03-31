@@ -73,7 +73,8 @@
   {
    "fieldname": "scheduled_date",
    "fieldtype": "Date",
-   "label": "Scheduled Date"
+   "label": "Scheduled Date",
+   "mandatory_depends_on": "eval:doc.status == \"Scheduled\""
   },
   {
    "fieldname": "pilot_name",
@@ -112,7 +113,8 @@
   {
    "fieldname": "completion_date",
    "fieldtype": "Date",
-   "label": "Completion Date"
+   "label": "Completion Date",
+   "mandatory_depends_on": "eval:doc.status == \"Completed(Ready For billing)\""
   },
   {
    "fieldname": "section_break_yssd",
@@ -158,7 +160,8 @@
   {
    "fieldname": "post_spray_photo_reference",
    "fieldtype": "Attach Image",
-   "label": "Post-Spray Photo Reference "
+   "label": "Post-Spray Photo Reference ",
+   "mandatory_depends_on": "eval:doc.status == \"Completed(Ready For billing)\""
   },
   {
    "fieldname": "farmer_signature",
@@ -270,8 +273,13 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
- "links": [],
- "modified": "2026-03-30 11:51:41.434438",
+ "links": [
+  {
+   "link_doctype": "Sales Invoice",
+   "link_fieldname": "custom_spray_job_id"
+  }
+ ],
+ "modified": "2026-03-31 11:01:49.742944",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",
