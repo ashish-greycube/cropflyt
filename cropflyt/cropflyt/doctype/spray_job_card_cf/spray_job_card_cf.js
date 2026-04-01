@@ -11,7 +11,7 @@ frappe.ui.form.on("Spray Job Card CF", {
             }
         })
         
-        if(frm.doc.status == "Completed(Ready For billing)"){
+        if(frm.doc.status == "Completed(Ready For billing)" && frm.doc.docstatus == 1){
             frm.add_custom_button("Create Invoice",()=>{
                 frappe.db.get_single_value("CropFlyt Settings","service_item").then(value=>{
                     if(value){

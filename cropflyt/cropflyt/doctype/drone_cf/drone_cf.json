@@ -6,19 +6,11 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "drone_name",
   "drone_model",
   "column_break_xkfb",
   "purchase_date"
  ],
  "fields": [
-  {
-   "allow_in_quick_entry": 1,
-   "fieldname": "drone_name",
-   "fieldtype": "Data",
-   "label": "Drone Name",
-   "unique": 1
-  },
   {
    "allow_in_quick_entry": 1,
    "fieldname": "drone_model",
@@ -39,7 +31,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-26 13:27:05.716746",
+ "modified": "2026-03-31 14:45:38.107581",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Drone CF",

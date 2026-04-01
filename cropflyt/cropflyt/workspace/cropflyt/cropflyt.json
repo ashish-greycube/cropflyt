@@ -1,7 +1,7 @@
 {
  "app": "cropflyt",
  "charts": [],
- "content": "[{\"id\":\"bfRyp7nqkT\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">CropFlyt workspace</span>\",\"col\":12}},{\"id\":\"4vmxfuaNpB\",\"type\":\"spacer\",\"data\":{\"col\":12}},{\"id\":\"gnO4JRbMN5\",\"type\":\"card\",\"data\":{\"card_name\":\"Company Master\",\"col\":4}},{\"id\":\"In1TSTeI_R\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup Master\",\"col\":4}},{\"id\":\"Mq9-6_zcQF\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}},{\"id\":\"pvAHcuQ0nP\",\"type\":\"card\",\"data\":{\"card_name\":\"Transaction\",\"col\":4}}]",
+ "content": "[{\"id\":\"pvAHcuQ0nP\",\"type\":\"card\",\"data\":{\"card_name\":\"Transaction\",\"col\":4}},{\"id\":\"In1TSTeI_R\",\"type\":\"card\",\"data\":{\"card_name\":\"Setup Master\",\"col\":4}},{\"id\":\"gnO4JRbMN5\",\"type\":\"card\",\"data\":{\"card_name\":\"Company Master\",\"col\":4}},{\"id\":\"Mq9-6_zcQF\",\"type\":\"card\",\"data\":{\"card_name\":\"Settings\",\"col\":4}}]",
  "creation": "2026-03-20 11:42:04.325927",
  "custom_blocks": [],
  "docstatus": 0,
@@ -201,7 +201,7 @@
    "type": "Link"
   }
  ],
- "modified": "2026-03-30 13:14:26.948041",
+ "modified": "2026-04-01 16:17:53.786909",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "CropFlyt",

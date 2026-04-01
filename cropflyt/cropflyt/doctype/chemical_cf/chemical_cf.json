@@ -12,7 +12,8 @@
   "phi_days",
   "column_break_rvzx",
   "active_ingredient",
-  "recommended_dose_per_bigha",
+  "recommended_dose_per_acre",
+  "dose_per_bigha",
   "drone_compatible"
  ],
  "fields": [
@@ -38,14 +39,6 @@
    "in_list_view": 1,
    "label": "Chemical Category",
    "options": "Chemical Category CF",
-   "reqd": 1
-  },
-  {
-   "description": "Standard reference dose",
-   "fieldname": "recommended_dose_per_bigha",
-   "fieldtype": "Float",
-   "label": "Recommended Dose Per Bigha",
-   "precision": "2",
    "reqd": 1
   },
   {
@@ -75,12 +68,28 @@
   {
    "fieldname": "column_break_rvzx",
    "fieldtype": "Column Break"
+  },
+  {
+   "description": "Recommended Dose Per Acre / Acre To Bigha",
+   "fieldname": "dose_per_bigha",
+   "fieldtype": "Float",
+   "label": "Dose Per Bigha",
+   "precision": "2",
+   "read_only": 1
+  },
+  {
+   "description": "Standard reference dose",
+   "fieldname": "recommended_dose_per_acre",
+   "fieldtype": "Float",
+   "label": "Recommended Dose Per Acre",
+   "precision": "2",
+   "reqd": 1
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-30 13:12:22.319353",
+ "modified": "2026-04-01 09:31:56.007079",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Chemical CF",

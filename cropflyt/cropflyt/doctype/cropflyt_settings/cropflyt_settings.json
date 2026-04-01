@@ -5,7 +5,9 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "service_item"
+  "service_item",
+  "column_break_nlww",
+  "acre_to_bigha_conversion"
  ],
  "fields": [
   {
@@ -15,13 +17,25 @@
    "label": "Service item",
    "options": "Item",
    "reqd": 1
+  },
+  {
+   "default": "5",
+   "fieldname": "acre_to_bigha_conversion",
+   "fieldtype": "Int",
+   "label": "Acre To Bigha Conversion",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_nlww",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-03-20 14:15:24.166381",
+ "modified": "2026-04-01 09:58:48.309059",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "CropFlyt Settings",

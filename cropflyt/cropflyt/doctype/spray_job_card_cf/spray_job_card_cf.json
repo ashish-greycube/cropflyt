@@ -40,9 +40,6 @@
   "expense_total_amount",
   "payment_method",
   "section_break_xbdm",
-  "farmer_signature",
-  "column_break_zvzu",
-  "cropflyt_representative_signature",
   "amended_from"
  ],
  "fields": [
@@ -90,10 +87,6 @@
    "label": "Drone Assigned",
    "options": "Drone CF",
    "reqd": 1
-  },
-  {
-   "fieldname": "column_break_zvzu",
-   "fieldtype": "Column Break"
   },
   {
    "fetch_from": "field_id.area_bigha",
@@ -147,9 +140,9 @@
    "options": "Village CF"
   },
   {
-   "fetch_from": "farmer_id.custom_farmer_mobile_no",
+   "fetch_from": "farmer_id.mobile_no",
    "fieldname": "mobile_number",
-   "fieldtype": "Phone",
+   "fieldtype": "Data",
    "label": "Mobile Number"
   },
   {
@@ -164,19 +157,9 @@
    "mandatory_depends_on": "eval:doc.status == \"Completed(Ready For billing)\""
   },
   {
-   "fieldname": "farmer_signature",
-   "fieldtype": "Signature",
-   "label": "Farmer Signature"
-  },
-  {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
    "label": "Remarks"
-  },
-  {
-   "fieldname": "cropflyt_representative_signature",
-   "fieldtype": "Signature",
-   "label": "Cropflyt Representative Signature"
   },
   {
    "fieldname": "drone_details",
@@ -209,8 +192,7 @@
   },
   {
    "fieldname": "section_break_xbdm",
-   "fieldtype": "Section Break",
-   "label": "Confirmation Section"
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "time_and_spray_details_section",
@@ -279,7 +261,7 @@
    "link_fieldname": "custom_spray_job_id"
   }
  ],
- "modified": "2026-03-31 11:01:49.742944",
+ "modified": "2026-04-01 12:56:19.568501",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",

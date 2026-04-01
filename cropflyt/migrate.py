@@ -39,20 +39,10 @@ def after_migrate():
                 'is_system_generated' : 0,
             },
             {
-                'fieldname' : 'custom_farmer_mobile_no',
-                'fieldtype' : 'Phone',
-                'label' : 'Farmer Mobile Number',
-                'insert_after' : 'custom_primary_crop',
-                'allow_in_quick_entry': 1,
-                'reqd': 1,
-                'is_custom_field' : 1,  
-                'is_system_generated' : 0,
-            },
-            {
                 'fieldname' : 'custom_total_land_bigha',
                 'fieldtype' : 'Float',
                 'label' : 'Total Land Bigha',
-                'insert_after' : 'custom_farmer_mobile_no',
+                'insert_after' : 'custom_primary_crop',
                 'precision': 2,
                 'is_custom_field' : 1,
                 'read_only': 1,  
@@ -154,7 +144,7 @@ def after_migrate():
         ]
     }
     
-    print("Adding Custom Fields In Customer and Sales Invoice")
+    print("Adding Custom Fields In Customer and Sales Invoice and Lead")
     for dt, fields in custom_fields.items():
         print("*******\n %s: " % dt, [d.get("fieldname") for d in fields])
     create_custom_fields(custom_fields)
