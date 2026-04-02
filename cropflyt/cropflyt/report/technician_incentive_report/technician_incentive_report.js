@@ -23,4 +23,11 @@ frappe.query_reports["Technician Incentive Report"] = {
 			"default":frappe.datetime.get_today()
 		},
 	],
+	"formatter": function(value, row, column, data, default_formatter) {
+        value = default_formatter(value, row, column, data);
+        if(data.farmer_name == "Total"){
+			value = `<span style="font-weight: bold;">${value}</span>`;
+		}
+        return value;
+    }
 };

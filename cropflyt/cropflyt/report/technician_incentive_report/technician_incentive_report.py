@@ -82,7 +82,7 @@ def get_data(filters):
         total_amount += total 
         total_bigha += d["total_bigha"]
         per_bigha_amt = d["per_bigha_amt"]
-    
+        
     f_data.append({
 		"farmer_name":"Total",
 		"total_bigha":total_bigha,
