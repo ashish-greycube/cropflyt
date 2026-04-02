@@ -65,14 +65,16 @@ def after_migrate():
                 'label' : 'Spray Job Id',
                 'options' : 'Spray Job Card CF',
                 'insert_after' : 'customer',
+                'read_only': 1, 
                 'is_custom_field' : 1,
                 'is_system_generated' : 0,
             },
             {
                 'fieldname' : 'custom_farmer_mobile_no',
-                'fieldtype' : 'Phone',
+                'fieldtype' : 'Data',
                 'label' : 'Farmer Mobile No',
                 'insert_after' : 'custom_spray_job_id',
+                'read_only': 1, 
                 'is_custom_field' : 1,
                 'is_system_generated' : 0,
             }
