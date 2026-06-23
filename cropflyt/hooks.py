@@ -132,9 +132,17 @@ app_license = "mit"
 # ---------------
 # Hook on document methods and events
 
-# doc_events = {
-	
-# }
+doc_events = {
+    'Customer': {
+        'after_insert': 'cropflyt.api.create_customer_contact'
+    },
+    "Sales Invoice": {
+        "on_submit": ["cropflyt.api.set_sales_invoice_reference", "cropflyt.api.on_submit_sales_invoice_create_payment_request"]
+    },
+    "Payment Request": {
+        "on_submit": "cropflyt.api.after_insert_save_qr_code_to_sales_invoice"
+    }
+}
 
 # Scheduled Tasks
 # ---------------

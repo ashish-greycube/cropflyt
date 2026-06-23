@@ -45,7 +45,6 @@ def after_migrate():
                 'insert_after' : 'custom_primary_crop',
                 'precision': 2,
                 'is_custom_field' : 1,
-                'read_only': 1,  
                 'is_system_generated' : 0,
             },
             {
@@ -56,6 +55,17 @@ def after_migrate():
                 'is_custom_field' : 1,
                 'allow_in_quick_entry': 1,
                 'is_system_generated' : 0,
+            },
+            {
+                'fieldname' : 'custom_mobile_no',
+                'fieldtype' : 'Data',
+                'label' : 'Customer Mobile Number',
+                'insert_after' : 'customer_type',
+                'is_custom_field' : 1,
+                'allow_in_quick_entry': 1,
+                'is_system_generated' : 0,
+                'reqd': 1,
+                'options': 'Phone'
             },
         ],
         "Sales Invoice" : [
@@ -75,6 +85,23 @@ def after_migrate():
                 'label' : 'Farmer Mobile No',
                 'insert_after' : 'custom_spray_job_id',
                 'read_only': 1, 
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            },
+            {
+                'fieldname' : 'custom_qr_code_file_path',
+                'fieldtype' : 'Attach Image',
+                'label' : 'QR Code File Path',
+                'insert_after' : 'outstanding_amount',
+                'hidden': 1, 
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            },
+            {
+                'fieldname' : 'custom_payment_link_qr_code',
+                'fieldtype' : 'Image',
+                'label' : 'Payment Link QR Code',
+                'insert_after' : 'custom_qr_code_file_path',
                 'is_custom_field' : 1,
                 'is_system_generated' : 0,
             }
@@ -150,3 +177,14 @@ def after_migrate():
     for dt, fields in custom_fields.items():
         print("*******\n %s: " % dt, [d.get("fieldname") for d in fields])
     create_custom_fields(custom_fields)
+
+    # Change Customer ID to Mobile Number
+    set_customer_mobile_number_as_id()
+
+
+def set_customer_mobile_number_as_id():
+    customer_current_id = frappe.defaults.get_global_default("cust_master_name")
+    if customer_current_id != "custom_mobile_no":
+        print("Setting Customer Mobile Number as Customer ID....")
+        frappe.defaults.set_global_default("cust_master_name", "custom_mobile_no")
+        frappe.db.commit()

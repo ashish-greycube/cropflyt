@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:chemical_name",
  "creation": "2026-03-09 13:25:29.032646",
@@ -8,13 +9,12 @@
  "field_order": [
   "chemical_name",
   "chemical_category",
-  "cost_per_unit",
   "phi_days",
+  "drone_compatible",
   "column_break_rvzx",
   "active_ingredient",
   "recommended_dose_per_acre",
-  "dose_per_bigha",
-  "drone_compatible"
+  "dose_per_bigha"
  ],
  "fields": [
   {
@@ -46,7 +46,7 @@
    "fieldname": "phi_days",
    "fieldtype": "Int",
    "in_list_view": 1,
-   "label": "Phi Days",
+   "label": "PHI Days",
    "reqd": 1
   },
   {
@@ -56,14 +56,6 @@
    "fieldname": "drone_compatible",
    "fieldtype": "Check",
    "label": "Is Drone Compatible?"
-  },
-  {
-   "description": "Cost per 1 Ltr",
-   "fieldname": "cost_per_unit",
-   "fieldtype": "Currency",
-   "in_list_view": 1,
-   "label": "Cost Per Unit",
-   "reqd": 1
   },
   {
    "fieldname": "column_break_rvzx",
@@ -78,18 +70,18 @@
    "read_only": 1
   },
   {
+   "default": "0",
    "description": "Standard reference dose",
    "fieldname": "recommended_dose_per_acre",
    "fieldtype": "Float",
    "label": "Recommended Dose Per Acre",
-   "precision": "2",
-   "reqd": 1
+   "precision": "2"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-04-01 09:31:56.007079",
+ "modified": "2026-06-22 13:15:24.610759",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Chemical CF",

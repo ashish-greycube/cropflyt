@@ -1,20 +1,21 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "farmer_name.-.#####",
+ "autoname": ".farmer_id.-.###",
  "creation": "2026-03-09 14:32:05.067292",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "farmer_id",
-  "field_name",
-  "village",
-  "crop_type",
-  "location",
-  "column_break_rfoj",
   "farmer_name",
+  "crop_type",
+  "column_break_rfoj",
+  "village",
   "area_bigha",
-  "notes"
+  "section_break_kvqz",
+  "notes",
+  "section_break_bnvk",
+  "location"
  ],
  "fields": [
   {
@@ -27,17 +28,10 @@
    "reqd": 1
   },
   {
-   "allow_in_quick_entry": 1,
-   "fieldname": "field_name",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Field Name",
-   "reqd": 1
-  },
-  {
    "fetch_from": "farmer_id.custom_village",
    "fieldname": "village",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Village",
    "options": "Village CF"
   },
@@ -47,6 +41,7 @@
    "fetch_if_empty": 1,
    "fieldname": "crop_type",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Crop Type",
    "options": "Crop Type CF",
    "reqd": 1
@@ -66,8 +61,7 @@
    "fieldname": "area_bigha",
    "fieldtype": "Float",
    "label": "Area Bigha",
-   "precision": "2",
-   "reqd": 1
+   "precision": "2"
   },
   {
    "fieldname": "notes",
@@ -78,12 +72,20 @@
    "fieldname": "location",
    "fieldtype": "Geolocation",
    "label": "GPS Location"
+  },
+  {
+   "fieldname": "section_break_kvqz",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "section_break_bnvk",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-26 13:27:55.161587",
+ "modified": "2026-06-22 13:39:25.154722",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Field CF",
@@ -174,7 +176,7 @@
  "quick_entry": 1,
  "row_format": "Dynamic",
  "rows_threshold_for_grid_search": 20,
- "search_fields": "field_name,crop_type",
+ "search_fields": "crop_type, village",
  "sort_field": "creation",
  "sort_order": "DESC",
  "states": []

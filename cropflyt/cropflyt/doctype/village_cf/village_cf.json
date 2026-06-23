@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:village_name",
  "creation": "2026-03-09 13:15:27.839292",
@@ -27,7 +28,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-20 15:56:16.918616",
+ "modified": "2026-06-22 10:14:00.912408",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Village CF",

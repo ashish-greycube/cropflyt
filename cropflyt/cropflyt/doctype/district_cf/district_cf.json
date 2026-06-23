@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "allow_rename": 1,
  "autoname": "field:district_name",
  "creation": "2026-03-09 13:22:06.182931",
@@ -20,7 +21,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2026-03-20 15:55:57.601319",
+ "modified": "2026-06-22 10:14:07.662445",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "District CF",

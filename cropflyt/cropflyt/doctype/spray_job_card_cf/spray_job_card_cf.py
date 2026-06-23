@@ -8,38 +8,63 @@ from frappe.model.mapper import get_mapped_doc
 
 
 class SprayJobCardCF(Document):
+    def on_submit(self):
+        self.create_sales_invoice_on_submit()
+
     def validate(self):
-        if self.status == "Completed(Ready For billing)" and not self.post_spray_photo_reference:
-            frappe.throw("Please upload Post-Spray Photo before marking the job as Completed.")
+        self.validate_sprayed_area()
+        self.calculate_expense_amount()  
             
-        if self.completion_date and self.completion_date < self.scheduled_date:
-            frappe.throw("Completion Date Must be Greater Than Or Equal to Scheduled Date")
-            
+    def calculate_expense_amount(self):
         total_amount = 0
         for row in self.expense_tracking:
-            total_amount += row.amount
-            
-        self.expense_total_amount = total_amount
-        
-        area = frappe.db.get_value("Field CF",self.field_id,"area_bigha")
-        if(self.area_sprayed_bigha > area):
-            frappe.throw("Area Sprayed Bigha is Greater than The Actual Area of Field.")
-            
-        total_chemical_amount = 0
-        
-        for row in self.chemical_applied_details:
-            total_chemical_amount += row.amount 
-        
-        self.total_chemical_amount = total_chemical_amount
-            
-    def before_validate(self):
-        for row in self.expense_tracking:
             row.amount = (row.quantity or 0) * (row.rate or 0)
-            
-        for row in self.chemical_applied_details:
-            row.total_quantity = self.area_sprayed_bigha * row.dose_per_bigha
-            row.amount = row.total_quantity * row.rate
-    
+            total_amount += row.amount
+        self.expense_total_amount = total_amount
+
+    def validate_sprayed_area(self):
+        area = frappe.db.get_value("Field CF", self.field_id,"area_bigha")
+        if area > 0 and self.area_sprayed_bigha > area:
+            frappe.throw("Area Sprayed Bigha is Greater than The Actual Area of Field.")
+
+    def create_sales_invoice_on_submit(self):
+        if self.area_sprayed_bigha > 0:
+            if frappe.db.get_value("CropFlyt Settings", "CropFlyt Settings", "service_item"):
+                invoice = frappe.new_doc("Sales Invoice")
+                invoice.update({
+                    'status': "Draft",
+                    'customer': self.farmer_id,
+                    'due_date': frappe.utils.today(),
+                    'company': frappe.defaults.get_global_default("company") or "CROPFLYT Technologies LLP",
+                    'custom_spray_job_id': self.name,
+                })
+
+                invoice.append("items", {
+                    "item_code": frappe.db.get_value("CropFlyt Settings", "CropFlyt Settings", "service_item"),
+                    "qty" : self.area_sprayed_bigha,
+                })
+
+                invoice.save(ignore_permissions=True)
+                invoice.submit()
+            else:
+                frappe.throw("Please set the Service Item in CropFlyt Settings.")
+
+    @frappe.whitelist()
+    def check_for_existing_field_id_else_create_new(self):
+        if self.crop_type and self.farmer_id:
+            isExisting = frappe.db.exists("Field CF", {"crop_type": self.crop_type, "farmer_id": self.farmer_id})
+            if isExisting:
+                self.field_id = frappe.db.get_value("Field CF", {"crop_type": self.crop_type, "farmer_id": self.farmer_id}, "name")
+            else:
+                field_doc = frappe.new_doc("Field CF")
+                field_doc.crop_type = self.crop_type
+                field_doc.farmer_id = self.farmer_id
+                field_doc.area_bigha = self.area_sprayed_bigha
+                field_doc.save()
+                self.field_id = field_doc.name
+        else:
+            frappe.throw("Please select Farmer ID first.")
+
 
 @frappe.whitelist()
 def create_invoice(source_name, target_doc=None):

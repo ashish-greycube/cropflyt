@@ -13,34 +13,25 @@
   "farmer_name",
   "mobile_number",
   "field_and_crop_details_section",
-  "field_id",
+  "crop_type",
   "area_sprayed_bigha",
   "column_break_rzea",
-  "crop_type",
+  "field_id",
   "chemical_details_section",
   "chemical_applied_details",
-  "section_break_ueqq",
-  "phi_communicated",
-  "column_break_blup",
-  "total_chemical_amount",
-  "pilot_and_drone_details_section",
-  "pilot_name",
-  "drone_assigned",
-  "drone_details",
   "time_and_spray_details_section",
   "scheduled_date",
   "status",
-  "pre_spray_photo_reference",
-  "post_spray_photo_reference",
   "column_break_uutq",
-  "completion_date",
   "remarks",
   "section_break_yssd",
   "expense_tracking",
-  "expense_total_amount",
-  "payment_method",
   "section_break_xbdm",
-  "amended_from"
+  "expense_total_amount",
+  "amended_from",
+  "column_break_yzts",
+  "payment_method",
+  "sales_invoice_reference"
  ],
  "fields": [
   {
@@ -56,8 +47,7 @@
    "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Field Id",
-   "options": "Field CF",
-   "reqd": 1
+   "options": "Field CF"
   },
   {
    "fetch_from": "field_id.crop_type",
@@ -65,28 +55,14 @@
    "fieldname": "crop_type",
    "fieldtype": "Link",
    "label": "Crop Type",
-   "options": "Crop Type CF"
+   "options": "Crop Type CF",
+   "reqd": 1
   },
   {
    "fieldname": "scheduled_date",
    "fieldtype": "Date",
    "label": "Scheduled Date",
    "mandatory_depends_on": "eval:doc.status == \"Scheduled\""
-  },
-  {
-   "fieldname": "pilot_name",
-   "fieldtype": "Link",
-   "in_list_view": 1,
-   "label": "Pilot Name",
-   "options": "Pilot CF",
-   "reqd": 1
-  },
-  {
-   "fieldname": "drone_assigned",
-   "fieldtype": "Link",
-   "label": "Drone Assigned",
-   "options": "Drone CF",
-   "reqd": 1
   },
   {
    "fetch_from": "field_id.area_bigha",
@@ -98,16 +74,11 @@
   },
   {
    "allow_on_submit": 1,
+   "default": "Completed(Ready For billing)",
    "fieldname": "status",
    "fieldtype": "Select",
    "label": "Job Status",
    "options": "\nBooked\nScheduled\nCompleted(Ready For billing)\nBilled\nPaid\nCancelled"
-  },
-  {
-   "fieldname": "completion_date",
-   "fieldtype": "Date",
-   "label": "Completion Date",
-   "mandatory_depends_on": "eval:doc.status == \"Completed(Ready For billing)\""
   },
   {
    "fieldname": "section_break_yssd",
@@ -129,7 +100,8 @@
    "fetch_from": "farmer_id.customer_name",
    "fieldname": "farmer_name",
    "fieldtype": "Data",
-   "label": "Farmer Name"
+   "label": "Farmer Name",
+   "read_only": 1
   },
   {
    "fetch_from": "farmer_id.custom_village",
@@ -137,35 +109,20 @@
    "fieldname": "village",
    "fieldtype": "Link",
    "label": "Village",
-   "options": "Village CF"
+   "options": "Village CF",
+   "read_only": 1
   },
   {
-   "fetch_from": "farmer_id.mobile_no",
+   "fetch_from": "farmer_id.custom_mobile_no",
    "fieldname": "mobile_number",
    "fieldtype": "Data",
-   "label": "Mobile Number"
-  },
-  {
-   "fieldname": "pre_spray_photo_reference",
-   "fieldtype": "Attach Image",
-   "label": "Pre-Spray Photo Reference"
-  },
-  {
-   "fieldname": "post_spray_photo_reference",
-   "fieldtype": "Attach Image",
-   "label": "Post-Spray Photo Reference ",
-   "mandatory_depends_on": "eval:doc.status == \"Completed(Ready For billing)\""
+   "label": "Mobile Number",
+   "read_only": 1
   },
   {
    "fieldname": "remarks",
    "fieldtype": "Small Text",
    "label": "Remarks"
-  },
-  {
-   "fieldname": "drone_details",
-   "fieldtype": "Table",
-   "label": "Drone Details",
-   "options": "Drone Flight Detail"
   },
   {
    "fieldname": "farmer_details_section",
@@ -186,13 +143,9 @@
    "fieldtype": "Column Break"
   },
   {
-   "fieldname": "pilot_and_drone_details_section",
-   "fieldtype": "Section Break",
-   "label": "Pilot And Drone Details"
-  },
-  {
    "fieldname": "section_break_xbdm",
-   "fieldtype": "Section Break"
+   "fieldtype": "Section Break",
+   "hide_border": 1
   },
   {
    "fieldname": "time_and_spray_details_section",
@@ -215,8 +168,7 @@
   },
   {
    "fieldname": "chemical_details_section",
-   "fieldtype": "Section Break",
-   "hide_border": 1
+   "fieldtype": "Section Break"
   },
   {
    "fieldname": "chemical_applied_details",
@@ -225,31 +177,20 @@
    "options": "Chemical Applied Detail"
   },
   {
-   "fieldname": "section_break_ueqq",
-   "fieldtype": "Section Break"
-  },
-  {
-   "default": "0",
-   "fieldname": "phi_communicated",
-   "fieldtype": "Check",
-   "label": "Is Pre-Harvest Interval Communicated To Farmer <br> (Legal Consent)"
-  },
-  {
-   "description": "Total cost of chemical used",
-   "fieldname": "total_chemical_amount",
-   "fieldtype": "Currency",
-   "label": "Total Chemical Amount",
-   "read_only": 1
-  },
-  {
-   "fieldname": "column_break_blup",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "payment_method",
    "fieldtype": "Select",
    "label": "Payment Method",
    "options": "\nCash\nUPI\nBank Transfer"
+  },
+  {
+   "fieldname": "column_break_yzts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "sales_invoice_reference",
+   "fieldtype": "Data",
+   "label": "Sales Invoice Reference",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -261,7 +202,7 @@
    "link_fieldname": "custom_spray_job_id"
   }
  ],
- "modified": "2026-04-01 12:56:19.568501",
+ "modified": "2026-06-22 15:41:13.267697",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",
