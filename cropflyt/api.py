@@ -74,21 +74,20 @@ def after_insert_save_qr_code_to_sales_invoice(self, method=None):
 
 @frappe.whitelist(allow_guest=True)
 def on_payment_authorized(response):
-    frappe.errprint(response)
-    frappe.errprint("="*30)
+    # frappe.log_error(title="Razorpay Payment Response", message="{0}\n-----\n{1}".format(response, frappe.request.get_data()))
     data = frappe.request.get_data()
     event_data = frappe.parse_json(data)
-    frappe.errprint(data, event_data)
     event = event_data.get("event")
     
     if event == "payment.captured":
         payload = event_data.get("payload", {})
         payment_entity = payload.get("payment", {}).get("entity", {})
-        references = payment_entity.get("notes", {})
+        description = payment_entity.get("description", "")
+        
         amount_paid = payment_entity.get("amount") / 100 
 
-        if references:
-            invoice_id = references[0].get("sales_invoice_id")
+        if description:
+            invoice_id = description.split()[-1]
             invoice = frappe.get_doc("Sales Invoice", invoice_id)
             if invoice.docstatus == 1 and invoice.outstanding_amount > 0:
                 pe = frappe.new_doc("Payment Entry") 
@@ -98,6 +97,10 @@ def on_payment_authorized(response):
                     "party": invoice.customer,
                     "paid_amount": amount_paid,
                     "received_amount": amount_paid,
+                    "paid_from" : "Debtors - CTL",
+                    "paid_to": "Razorpay - CTL",
+                    "paid_from_account_currency" : "INR",
+                    "paid_to_account_currency" : "INR"
                 })
 
                 pe.append("references", {
