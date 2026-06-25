@@ -54,10 +54,7 @@ def on_submit_sales_invoice_create_payment_request(self, method=None):
         pr.submit()
 
 def after_insert_save_qr_code_to_sales_invoice(self, method=None):
-    print("Payment Request created: {0}".format(self.name))
-    print(frappe.as_json(self), self.payment_url)
     if self.reference_doctype and self.reference_name:
-        print("Generating QR code for Payment Request: {0}".format(self.name))
         qr = pyqrcode.create(self.payment_url)
         buffer = io.BytesIO()
         qr.png(buffer, scale=4)
@@ -74,3 +71,40 @@ def after_insert_save_qr_code_to_sales_invoice(self, method=None):
 
         frappe.db.set_value(self.reference_doctype, self.reference_name, "custom_qr_code_file_path", _file.file_url)
 
+
+@frappe.whitelist(allow_guest=True)
+def on_payment_authorized(response):
+    frappe.errprint(response)
+    frappe.errprint("="*30)
+    data = frappe.request.get_data()
+    event_data = frappe.parse_json(data)
+    frappe.errprint(data, event_data)
+    event = event_data.get("event")
+    
+    if event == "payment.captured":
+        payload = event_data.get("payload", {})
+        payment_entity = payload.get("payment", {}).get("entity", {})
+        references = payment_entity.get("notes", {})
+        amount_paid = payment_entity.get("amount") / 100 
+
+        if references:
+            invoice_id = references[0].get("sales_invoice_id")
+            invoice = frappe.get_doc("Sales Invoice", invoice_id)
+            if invoice.docstatus == 1 and invoice.outstanding_amount > 0:
+                pe = frappe.new_doc("Payment Entry") 
+                pe.update({
+                    "payment_type": "Receive",
+                    "party_type": "Customer",
+                    "party": invoice.customer,
+                    "paid_amount": amount_paid,
+                    "received_amount": amount_paid,
+                })
+
+                pe.append("references", {
+                    "reference_doctype": "Sales Invoice",
+                    "reference_name": invoice.name,
+                    "allocated_amount": amount_paid
+                })
+
+                pe.insert(ignore_permisssions=True)
+                pe.submit()

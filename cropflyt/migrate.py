@@ -104,6 +104,7 @@ def after_migrate():
                 'insert_after' : 'custom_qr_code_file_path',
                 'is_custom_field' : 1,
                 'is_system_generated' : 0,
+                'options': 'custom_qr_code_file_path'
             }
         ],
         "Lead":[
