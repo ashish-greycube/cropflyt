@@ -36,33 +36,33 @@ def on_submit_sales_invoice_create_payment_request(self, method=None):
     generate_razorpay_qr(self)
 
     # Create Payment Request For Sales Invoice
-    payment_gateway_account = frappe.get_doc("Payment Gateway Account", {
-        "company": self.company,
-        "payment_gateway" : "Razorpay",
-    })
-    if self.status == "Unpaid" and self.custom_spray_job_id:
-        pr = frappe.new_doc("Payment Request")
+    # payment_gateway_account = frappe.get_doc("Payment Gateway Account", {
+    #     "company": self.company,
+    #     "payment_gateway" : "Razorpay",
+    # })
+    # if self.status == "Unpaid" and self.custom_spray_job_id:
+    #     pr = frappe.new_doc("Payment Request")
 
-        pr.payment_request_type = "Inward"
-        pr.company = self.company
-        pr.party_type = "Customer"
-        pr.party = self.customer
-        pr.party_name = self.customer_name
-        pr.reference_doctype = "Sales Invoice"
-        pr.reference_name = self.name
-        pr.grand_total = self.grand_total
-        pr.outstanding_amount = self.outstanding_amount
-        pr.currency = self.currency
-        pr.party_account_currency = self.currency
-        pr.email_to = self.owner
-        pr.payment_gateway_account = payment_gateway_account.name
-        pr.subject = "Payment Request for {0}".format(self.name)
+    #     pr.payment_request_type = "Inward"
+    #     pr.company = self.company
+    #     pr.party_type = "Customer"
+    #     pr.party = self.customer
+    #     pr.party_name = self.customer_name
+    #     pr.reference_doctype = "Sales Invoice"
+    #     pr.reference_name = self.name
+    #     pr.grand_total = self.grand_total
+    #     pr.outstanding_amount = self.outstanding_amount
+    #     pr.currency = self.currency
+    #     pr.party_account_currency = self.currency
+    #     pr.email_to = self.owner
+    #     pr.payment_gateway_account = payment_gateway_account.name
+    #     pr.subject = "Payment Request for {0}".format(self.name)
 
-        pr.payment_gateway = payment_gateway_account.payment_gateway
-        pr.payment_account = payment_gateway_account.payment_account
+    #     pr.payment_gateway = payment_gateway_account.payment_gateway
+    #     pr.payment_account = payment_gateway_account.payment_account
 
-        pr.save(ignore_permissions=True)
-        pr.submit()
+    #     pr.save(ignore_permissions=True)
+    #     pr.submit()
 
 def after_insert_save_qr_code_to_sales_invoice(self, method=None):
     if self.reference_doctype and self.reference_name:
@@ -167,11 +167,11 @@ def on_payment_authorized():
     if event == "payment.captured":  
         payload = event_data.get("payload", {})
         payment_entity = payload.get("payment", {}).get("entity", {})
-        description = payment_entity.get("description", "")
+        notes = payment_entity.get("notes", "")
 
         amount_paid = payment_entity.get("amount") / 100 
-        if description: 
-            invoice_id = description.split()[-1]
+        if notes: 
+            invoice_id = notes.get("sales_invoice")
             invoice = frappe.get_doc("Sales Invoice", invoice_id)
             if invoice.docstatus == 1 and invoice.outstanding_amount > 0:
                 try:
