@@ -5,6 +5,12 @@
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "razorpay_details_section",
+  "webhook_secret",
+  "column_break_jcqj",
+  "default_paid_to_account",
+  "default_paid_from_account",
+  "section_break_adep",
   "service_item",
   "column_break_nlww",
   "acre_to_bigha_conversion"
@@ -23,19 +29,51 @@
    "fieldname": "acre_to_bigha_conversion",
    "fieldtype": "Int",
    "label": "Acre To Bigha Conversion",
-   "non_negative": 1,
-   "reqd": 1
+   "non_negative": 1
   },
   {
    "fieldname": "column_break_nlww",
    "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "razorpay_details_section",
+   "fieldtype": "Section Break",
+   "label": "Razorpay Details"
+  },
+  {
+   "fieldname": "webhook_secret",
+   "fieldtype": "Password",
+   "label": "Webhook Secret",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_jcqj",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_paid_to_account",
+   "fieldtype": "Link",
+   "label": "Default Paid To Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "default_paid_from_account",
+   "fieldtype": "Link",
+   "label": "Default Paid From Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_adep",
+   "fieldtype": "Section Break"
   }
  ],
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "issingle": 1,
  "links": [],
- "modified": "2026-04-01 09:58:48.309059",
+ "modified": "2026-06-29 09:55:39.193799",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "CropFlyt Settings",

@@ -31,7 +31,11 @@
   "amended_from",
   "column_break_yzts",
   "payment_method",
-  "sales_invoice_reference"
+  "sales_invoice_reference",
+  "section_break_zety",
+  "razorpay_qr_code",
+  "column_break_xbqu",
+  "razorpay_qr_code_path"
  ],
  "fields": [
   {
@@ -191,6 +195,28 @@
    "fieldtype": "Data",
    "label": "Sales Invoice Reference",
    "read_only": 1
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_zety",
+   "fieldtype": "Section Break",
+   "label": "Razorpay QR Code"
+  },
+  {
+   "fieldname": "razorpay_qr_code_path",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Razorpay QR Code Path"
+  },
+  {
+   "fieldname": "razorpay_qr_code",
+   "fieldtype": "Image",
+   "label": "Razorpay QR Code",
+   "options": "razorpay_qr_code_path"
+  },
+  {
+   "fieldname": "column_break_xbqu",
+   "fieldtype": "Column Break"
   }
  ],
  "grid_page_length": 50,
@@ -202,7 +228,7 @@
    "link_fieldname": "custom_spray_job_id"
   }
  ],
- "modified": "2026-06-22 15:41:13.267697",
+ "modified": "2026-06-26 18:00:36.850359",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",

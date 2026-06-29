@@ -130,6 +130,7 @@ def generate_razorpay_qr(doc, method=None):
         
         # Save the URL to your custom field
         frappe.db.set_value("Sales Invoice", doc.name, "custom_qr_code_file_path", qr_image_url)
+        frappe.db.set_value("Spray Job Card CF", doc.custom_spray_job_id, "razorpay_qr_code_path", qr_image_url)
 
     except Exception as e:
         frappe.log_error(title="Razorpay QR Generation Failed", message=str(e))
@@ -140,7 +141,17 @@ def generate_razorpay_qr(doc, method=None):
 # ==================================================================================
 @frappe.whitelist(allow_guest=True)
 def on_payment_authorized():
-    WEBHOOK_SECRET = "Cropflyt@2026"
+    settings = frappe.get_doc("CropFlyt Settings")
+    if not settings:
+        frappe.throw("CropFlyt Settings Not Found.")
+        return
+
+    if settings and (not settings.default_paid_to_account or not settings.default_paid_from_account):
+        frappe.throw("Please set Default Paid To & Paid From Accounts in Cropflyt Settings")
+        return
+
+    
+    WEBHOOK_SECRET = settings.get_password("webhook_secret", raise_exception=False)
     data = frappe.request.get_data()
     
     received_signature = frappe.get_request_header("X-Razorpay-Signature")
@@ -182,8 +193,8 @@ def on_payment_authorized():
                         "party": invoice.customer,
                         "paid_amount": amount_paid,
                         "received_amount": amount_paid,
-                        "paid_from" : "Debtors - CFLYT",
-                        "paid_to": "Razorpay - CFLYT",
+                        "paid_from" : settings.default_paid_from_account,
+                        "paid_to": settings.default_paid_to_account,
                         "paid_from_account_currency" : "INR",
                         "paid_to_account_currency" : "INR",
                         "reference_no": payment_entity.get("id"),
