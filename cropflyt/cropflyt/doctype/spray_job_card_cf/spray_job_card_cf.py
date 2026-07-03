@@ -46,6 +46,8 @@ class SprayJobCardCF(Document):
 
                 invoice.save(ignore_permissions=True)
                 invoice.submit()
+                self.reload()
+                frappe.msgprint("Sales Invoice {0} Created Successfully.".format(invoice.name), alert=True)
             else:
                 frappe.throw("Please set the Service Item in CropFlyt Settings.")
 
