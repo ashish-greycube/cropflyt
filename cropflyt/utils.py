@@ -13,7 +13,7 @@ def on_whatsapp_message():
         token = params.get("hub.verify_token")
         challenge = params.get("hub.challenge")
         
-        MY_VERIFY_TOKEN = "GC@2026"
+        MY_VERIFY_TOKEN = ""
         
         if mode == "subscribe" and token == MY_VERIFY_TOKEN:
             return Response(challenge, mimetype='text/plain', status=200)
