@@ -17,6 +17,7 @@ def check_for_existing_field_id_else_create_new(crop_type, farmer_id):
             field_doc.farmer_id = farmer_id
             field_doc.check_permission("create")
             field_doc.save()
+            frappe.db.commit()
             field_id = field_doc.name
         return field_id
     return "Provide Croptype & Farmer ID to check for existing field"
@@ -47,6 +48,7 @@ def create_sales_invoice_on_submit(docname):
             invoice.save()
             invoice.check_permission("submit")
             invoice.submit()
+            frappe.db.commit()
             return "Sales Invoice Created Successfully: {0}".format(invoice.name)
         else:
             return "Please set the Service Item in CropFlyt Settings."
