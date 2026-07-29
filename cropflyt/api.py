@@ -27,6 +27,7 @@ def create_customer_contact(self, method=None):
 def set_sales_invoice_reference(self, method=None):
     if self.custom_spray_job_id:
         frappe.db.set_value("Spray Job Card CF", self.custom_spray_job_id, "sales_invoice_reference", self.name)
+        frappe.db.set_value("Spray Job Card CF", self.custom_spray_job_id, "sales_invoice_status", self.status)
 
 # ==================================================================================
 # On Submit Of Sales Invoice QR Generated & Payment Request Created
