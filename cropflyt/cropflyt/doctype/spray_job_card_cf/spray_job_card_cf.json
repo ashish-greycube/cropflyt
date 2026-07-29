@@ -228,7 +228,8 @@
    "fieldname": "sales_invoice_status",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Sales Invoice Status"
+   "label": "Sales Invoice Status",
+   "read_only": 1
   }
  ],
  "grid_page_length": 50,
@@ -240,7 +241,7 @@
    "link_fieldname": "custom_spray_job_id"
   }
  ],
- "modified": "2026-07-29 09:47:42.585387",
+ "modified": "2026-07-29 10:47:08.829502",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",
