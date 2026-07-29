@@ -90,6 +90,13 @@ def generate_razorpay_qr(doc, method=None):
     if doc.outstanding_amount <= 0:
         return
 
+    # Only generate if payment mode in Spray Job Card is Razorpay QR
+    if not doc.custom_spray_job_id or not doc.custom_payment_method:
+        return
+
+    if doc.custom_spray_job_id and doc.custom_payment_method and doc.custom_payment_method != "Razorpay QR":
+        return
+
     # Razorpay credentials 
     razorpay_settings = frappe.get_doc("Razorpay Settings")
     if razorpay_settings:

@@ -89,6 +89,15 @@ def after_migrate():
                 'is_system_generated' : 0,
             },
             {
+                'fieldname' : 'custom_payment_method',
+                'fieldtype' : 'Data',
+                'label' : 'Payment Method',
+                'insert_after' : 'custom_farmer_mobile_no',
+                'read_only': 1, 
+                'is_custom_field' : 1,
+                'is_system_generated' : 0,
+            },
+            {
                 'fieldname' : 'custom_qr_code_file_path',
                 'fieldtype' : 'Attach Image',
                 'label' : 'QR Code File Path',

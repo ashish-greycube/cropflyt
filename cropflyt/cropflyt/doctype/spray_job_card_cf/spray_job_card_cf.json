@@ -22,6 +22,7 @@
   "time_and_spray_details_section",
   "scheduled_date",
   "status",
+  "payment_method",
   "column_break_uutq",
   "remarks",
   "section_break_yssd",
@@ -30,8 +31,8 @@
   "expense_total_amount",
   "amended_from",
   "column_break_yzts",
-  "payment_method",
   "sales_invoice_reference",
+  "sales_invoice_status",
   "section_break_zety",
   "razorpay_qr_code",
   "column_break_xbqu",
@@ -181,10 +182,12 @@
    "options": "Chemical Applied Detail"
   },
   {
+   "default": "Razorpay QR",
    "fieldname": "payment_method",
    "fieldtype": "Select",
    "label": "Payment Method",
-   "options": "\nCash\nUPI\nBank Transfer"
+   "options": "\nCash\nRazorpay QR\nCompany QR",
+   "reqd": 1
   },
   {
    "fieldname": "column_break_yzts",
@@ -192,12 +195,14 @@
   },
   {
    "fieldname": "sales_invoice_reference",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "label": "Sales Invoice Reference",
+   "options": "Sales Invoice",
    "read_only": 1
   },
   {
    "collapsible": 1,
+   "depends_on": "eval:doc.payment_method==\"Razorpay QR\";",
    "fieldname": "section_break_zety",
    "fieldtype": "Section Break",
    "label": "Razorpay QR Code"
@@ -217,6 +222,13 @@
   {
    "fieldname": "column_break_xbqu",
    "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "sales_invoice_reference.status",
+   "fieldname": "sales_invoice_status",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Sales Invoice Status"
   }
  ],
  "grid_page_length": 50,
@@ -228,7 +240,7 @@
    "link_fieldname": "custom_spray_job_id"
   }
  ],
- "modified": "2026-06-26 18:00:36.850359",
+ "modified": "2026-07-29 09:47:42.585387",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",

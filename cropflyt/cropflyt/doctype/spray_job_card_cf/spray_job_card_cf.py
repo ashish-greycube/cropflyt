@@ -37,6 +37,7 @@ class SprayJobCardCF(Document):
                     'due_date': frappe.utils.today(),
                     'company': frappe.defaults.get_global_default("company") or "CROPFLYT Technologies LLP",
                     'custom_spray_job_id': self.name,
+                    'custom_payment_method': self.payment_method
                 })
 
                 invoice.append("items", {
