@@ -25,6 +25,11 @@ frappe.ui.form.on("Spray Job Card CF", {
                 })
             })
         }
+
+        frm.call({
+            method: "set_sales_invoice_status",
+            doc: frm.doc,
+        })
     },
 
     crop_type: function (frm) {

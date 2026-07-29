@@ -224,7 +224,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "sales_invoice_reference.status",
    "fieldname": "sales_invoice_status",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -241,7 +240,7 @@
    "link_fieldname": "custom_spray_job_id"
   }
  ],
- "modified": "2026-07-29 18:01:08.952152",
+ "modified": "2026-07-29 18:08:49.874019",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",

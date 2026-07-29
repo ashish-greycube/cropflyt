@@ -68,6 +68,12 @@ class SprayJobCardCF(Document):
         else:
             frappe.throw("Please select Farmer ID first.")
 
+    @frappe.whitelist()
+    def set_sales_invoice_status(self):
+        if self.sales_invoice_reference:
+            si_status = frappe.db.get_value("Sales Invoice", self.sales_invoice_reference, "status")
+            frappe.db.set_value("Spray Job Card CF", self.name, "sales_invoice_status", si_status)
+
 
 @frappe.whitelist()
 def create_invoice(source_name, target_doc=None):
