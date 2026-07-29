@@ -195,7 +195,7 @@
   },
   {
    "fieldname": "sales_invoice_reference",
-   "fieldtype": "Link",
+   "fieldtype": "Data",
    "label": "Sales Invoice Reference",
    "options": "Sales Invoice",
    "read_only": 1
@@ -241,7 +241,7 @@
    "link_fieldname": "custom_spray_job_id"
   }
  ],
- "modified": "2026-07-29 10:47:08.829502",
+ "modified": "2026-07-29 18:01:08.952152",
  "modified_by": "Administrator",
  "module": "Cropflyt",
  "name": "Spray Job Card CF",
@@ -249,6 +249,8 @@
  "owner": "Administrator@example.com",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -257,7 +259,9 @@
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
    "share": 1,
+   "submit": 1,
    "write": 1
   },
   {
